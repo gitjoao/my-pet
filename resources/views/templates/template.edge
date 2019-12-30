@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  @include('templates.head')
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    @include('templates.menu')
+    <div class="main-panel">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid" style="justify-content: flex-end;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="content">
+        @section('conteudo') 
+        @endsection
+      </div>
+      <footer class="footer">
+        @include('templates.footer')
+      </footer>
+    </div>
+  </div>
+  @include('templates.script')
+
+</body>
+
+</html>
