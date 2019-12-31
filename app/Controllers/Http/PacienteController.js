@@ -1,17 +1,21 @@
 'use strict'
 
-class AnimalController {
+class PacienteController {
 
   async index ({ request, response, view }) {
 
-    return view.render('animais.lista')
+    return view.render('pacientes.lista')
   }
 
   async create ({ request, response, view }) {
+
+    return view.render('pacientes.create')
   }
 
   
   async store ({ request, response }) {
+
+    console.log(request.post())
   }
 
   
@@ -30,4 +34,4 @@ class AnimalController {
   }
 }
 
-module.exports = AnimalController
+module.exports = PacienteController

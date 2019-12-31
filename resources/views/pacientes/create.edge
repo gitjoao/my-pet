@@ -1,0 +1,99 @@
+@layout('templates.template')
+@section('conteudo')
+
+<div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Ficha cadastro</h4>
+                </div>
+                <div class="card-body">
+                <form action="{{ route('pacientes.store') }}" method="POST">
+                    <input type="hidden" name="_csrf" value="{{ csrfToken }}">         
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Nome do Tutor</label>
+                          <input name="nome" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">E-mail</label>
+                          <input name="email" type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-4">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Contato</label>
+                          <input name="contato" type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">CPF</label>
+                          <input name="cpf" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">CEP</label>
+                          <input name="cep" type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-5">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Cidade</label>
+                          <input name="cidade" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Estado</label>
+                          <input name="estato" type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Rua</label>
+                          <input name="rua" type="text" class="form-control">
+                        </div>
+                    </div>
+                     <div class="col-md-4">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Complemento</label>
+                          <input name="complemento" type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-2">
+                        <div class="form-group bmd-form-group">
+                          <label class="bmd-label-floating">Número</label>
+                          <input nome="numero" type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Observação</label>
+                          <div class="form-group bmd-form-group">
+                            <label class="bmd-label-floating"> Anote algo importante.</label>
+                            <textarea name="observacao" class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Salvar</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+@endsection

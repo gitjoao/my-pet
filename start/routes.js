@@ -18,6 +18,8 @@ const Route = use('Route')
 
 Route.get('/', 'DashboardController.index')
 
-Route.get('/animais', 'AnimalController.index')
+Route.get('pacientes', 'PacienteController.index')
+Route.get('pacientes/create', 'PacienteController.create').as('pacientes.create')
+Route.post('pacientes/store', 'PacienteController.store').as('pacientes.store')
 
 
