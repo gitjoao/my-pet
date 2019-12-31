@@ -7,9 +7,10 @@ class PacienteController {
     return view.render('pacientes.lista')
   }
 
-  async create ({ request, response, view }) {
+  async create ({ request, response, view, params }) {
 
-    return view.render('pacientes.create')
+    console.log(params)
+    return view.render('pacientes.create', {params})
   }
 
   

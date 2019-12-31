@@ -18,8 +18,15 @@ const Route = use('Route')
 
 Route.get('/', 'DashboardController.index')
 
-Route.get('pacientes', 'PacienteController.index')
-Route.get('pacientes/create', 'PacienteController.create').as('pacientes.create')
-Route.post('pacientes/store', 'PacienteController.store').as('pacientes.store')
+Route.group(() => {
+    Route.get('/lista', 'PacienteController.index').as('pacientes.index')   
+    Route.get('/novo/:id', 'PacienteController.create').as('pacientes.create') 
+    Route.post('/salvar', 'PacienteController.store').as('pacientes.store') 
+}).prefix('pacientes')
 
+Route.group(() => {
+    Route.get('/lista', 'TutorController.index').as('tutores.index')
+    Route.get('/novo', 'TutorController.create').as('tutores.create')
+    Route.post('/salvar', 'TutorController.store').as('tutores.store')
+}).prefix('tutores')
 

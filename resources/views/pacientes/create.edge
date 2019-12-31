@@ -6,74 +6,52 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Ficha cadastro</h4>
+                  <h4 class="card-title">Ficha cadastro do Paciente</h4>
                 </div>
                 <div class="card-body">
-                <form action="{{ route('pacientes.store') }}" method="POST">
+                     Nome do Tutor: <h4>{{ params.id }} </h4>
+                   
+                     <form action="{{ route('tutores.store') }}" method="POST">
                     <input type="hidden" name="_csrf" value="{{ csrfToken }}">         
                     <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-md-8">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Nome do Tutor</label>
+                          <label class="bmd-label-floating">Nome do Paciente</label>
                           <input name="nome" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">E-mail</label>
-                          <input name="email" type="text" class="form-control">
-                        </div>
-                      </div>
-                       <div class="col-md-4">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Contato</label>
-                          <input name="contato" type="text" class="form-control">
+                          <label class="bmd-label-floating">RGA</label>
+                          <input name="rga" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
                     <div class="row">
+                               <div class="col-md-3">
+                                <div class="form-group bmd-form-group">
+                                  <label class="bmd-label-floating">Raça</label>
+                                  <input name="contato" type="text" class="form-control">
+                                </div>
+                              </div>
                       <div class="col-md-3">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">CPF</label>
+                          <label class="bmd-label-floating">Peso</label>
                           <input name="cpf" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-2">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">CEP</label>
+                          <label class="bmd-label-floating">Idade</label>
                           <input name="cep" type="text" class="form-control">
-                        </div>
-                      </div>
-                       <div class="col-md-5">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Cidade</label>
-                          <input name="cidade" type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-2">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Estado</label>
-                          <input name="estato" type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Rua</label>
-                          <input name="rua" type="text" class="form-control">
-                        </div>
-                    </div>
-                     <div class="col-md-4">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Complemento</label>
-                          <input name="complemento" type="text" class="form-control">
-                        </div>
-                      </div>
-                       <div class="col-md-2">
-                        <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Número</label>
-                          <input nome="numero" type="text" class="form-control">
+                        <select class="selectpicker " data-style="select-with-transition" title="Selecione o sexo" data-size="7">
+                            <option value="1">Fêmea</option>
+                            <option value="2">Macho</option>
+                        </select>
                         </div>
                       </div>
                     </div>
